@@ -7,17 +7,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo bem vindo ao script da pipeline do clone da Netflix!
 
   deploy-dev:
     runs-on: ubuntu-latest
     environment:
-      name:dev
-      url:'venalu.com.br'
-      needs:build
+      name: dev
+      url: 'venalu.com.br'
+      needs: build
     steps:
       - name: Run a one-line script
         run: echo Deploy de desenvolvimento!
@@ -25,19 +24,19 @@ jobs:
   deploy-hmg:
     runs-on: ubuntu-latest
     environment:
-      name:hmg
-      url:'venalu.com.br'
-      needs:deploy-dev
+      name: hmg
+      url: 'venalu.com.br'
+      needs: deploy-dev
     steps:
       - name: Run a one-line script
         run: echo Deploy de homologação!
   
- deploy-prod:
+  deploy-prod:
     runs-on: ubuntu-latest
     environment:
-      name:prod
-      url:'venalu.com.br'
-      needs:deploy-hmg
+      name: prod
+      url: 'venalu.com.br'
+      needs: deploy-hmg
     steps:
       - name: Run a one-line script
         run: echo Deploy de produção!
