@@ -154,7 +154,7 @@ header .botao_entrar{
     nav{
         z-index: 99;
         background-color:rgb(40, 35, 35);
-        width: 30vw;
+        width: 10vw;
         height: calc(100vh - 100px);
         top: 50px;
         left: 0;
