@@ -20,12 +20,17 @@ body{
     color: white;
 }
 header {
-    background-color:#000;
+ 
+
+    background-color: #141414;
     color: #fff;
     width:100%;
     z-index:999; /*Deixa sobre os outros*/
     position:fixed;
     height:65px;
+ 
+    margin: auto;
+
 
 
 
@@ -35,8 +40,7 @@ header {
     display: flex; /*Utiliza a Flex box, alinhando os elementos na tela, jogando tudo para uma linha*/
     max-width:1440px;
     align-items: center;
-    margin:auto;
-    
+    margin:auto;    
     flex-direction: row;
     justify-content:space-between;
     background-color:var --preta;
@@ -63,17 +67,34 @@ nav{
     align-items:center;
 }
 
-.nav-left{
+
+.logo{
+
     flex:1;
     display: flex;
     float: left;
     position: relative;
+    width: 100px;
+    height: 25px;
+    top: 10px;
+    justify-content:flex-start; /*Alinha os elementos - Space Between*/
+          
+ }
+ 
+
+.nav-left{
+    flex:2;
+    display: flex;
+    float: left;
+    position: relative;
+    margin-left: 20px;
+    
     top: 14px;
     justify-content:flex-start; /*Alinha os elementos - Space Between*/
 }
 
 .nav-right{
-    flex:2;
+    flex:3;
     display: flex;
     position: relative;
     justify-content:flex-end;
@@ -91,13 +112,6 @@ nav{
     list-style-type:none;
 }
 
-
-header .logo{
-    margin-right: 20px;
-    width: 100px;
-    height: 25px;
-    
-}
 
 
 header nav a{
@@ -132,28 +146,62 @@ header .botao_entrar{
 }
 
 
-@media only screen and (max-width:918px){
-    header .container nav{
-        display: none;
-    }
-    /*REEXIBIR MENU MOBILE*/
-
-    header .container .menu_mobile i{
-        display:block;
-    }
-    header .logo{
-        display: flex;
-        align-items: center
-    }
-}
-
 /*Responsividade para smartphones*/
-@media only screen and (max-width: 922px){
+@media only screen and (min-width:450px) and (max-width:1000px){
+   
 
-    header .logo{
-        margin-right: 20px;
-        width: 70px;
-        height: 25px;
+   
+    nav{
+        z-index: 99;
+        background-color:rgb(40, 35, 35);
+        width: 10vw;
+        height: calc(100vh - 100px);
+        top: 50px;
+        left: 0;
         
     }
+
+    nav ul{
+        flex-direction: column;
+    }
+    nav li a {
+        font-weight: bold;
+        height: 80px;
+        font-size: 27px;
+        margin-left: 50px;
+        border: 0;
+    }
+   
+     .logo{
+        width: 200px;
+        height: 50px;
+     
+        
+    }
+
+    .container {
+     
+        display: flex;
+        position: relative;
+        justify-content:center;
+        
+        }
+    
+    
+    .menu_mobile{
+        
+        flex:1;
+        display: flex;
+        position: relative;
+        justify-content:flex-start;
+        display: block;
+        align-items: center;
+        display: flex;
+        width: 200px;
+        margin: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 16px;
+    }
 }
+
