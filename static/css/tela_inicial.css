@@ -112,15 +112,14 @@ body {
     font-size: 25px;
 }
 
-.scrollbutton {
-    width: 70px;
-    height: 70px;
-    border-radius: 35px;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-    -ms-border-radius: 35px;
-    -o-border-radius: 35px;
-    background-color: var(--vermelha);
+.scrollbutton img {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
     position: fixed;
     right: 20px;
     bottom: 20px;
